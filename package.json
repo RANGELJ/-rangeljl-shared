@@ -1,11 +1,15 @@
 {
   "name": "@rangeljl/shared",
-  "version": "9.0.0",
+  "version": "9.0.1",
   "description": "A set of functions that are used in a lot of places",
   "main": "index.ts",
   "scripts": {
     "deploy": "tsx ./scripts/deploy.ts",
     "updatedocs": "ts-readme-generator -h"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RANGELJ/-rangeljl-shared"
   },
   "keywords": [
     "Shared",
