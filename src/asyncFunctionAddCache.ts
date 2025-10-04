@@ -121,16 +121,16 @@ const asyncFunctionAddCache = <OriginalArgs, ReturnValue>({
    * ```
    */
   functionWithCache.removeCacheRecordsWhere = (
-    conditionFunction: (record: CacheRecord) => boolean,
+    conditionFunction: (hash: string, record: CacheRecord) => boolean,
   ) => {
-    for (const [key, record] of cacheMap.entries()) {
+    for (const [hash, record] of cacheMap.entries()) {
       if (!record) {
         continue
       }
-      if (!conditionFunction(record)) {
+      if (!conditionFunction(hash, record)) {
         continue
       }
-      cacheMap.delete(key)
+      cacheMap.delete(hash)
     }
   }
 
