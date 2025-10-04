@@ -1,6 +1,6 @@
 {
   "name": "@rangeljl/shared",
-  "version": "9.0.1",
+  "version": "9.1.0",
   "description": "A set of functions that are used in a lot of places",
   "main": "index.ts",
   "scripts": {
