@@ -1,7 +1,5 @@
 import 'dotenv/config'
 import path from 'path'
-import {select} from '@inquirer/prompts'
-import packageJsonUpdateVersionNumber from '@rangeljl/devscripts/packageJsonUpdateVersionNumber'
 import fs from 'fs-extra'
 
 const deploy = async () => {
@@ -19,13 +17,6 @@ const deploy = async () => {
   await fs.remove(distDir)
 
   const packagePath = path.join(baseDir, 'package.json')
-
-  await packageJsonUpdateVersionNumber({
-    packagePath,
-    fileReadAsJson: fs.readJSON,
-    fileWriteJson: fs.writeJSON,
-    terminalSelect: select,
-  })
 
   const {execa} = await import('execa')
 
